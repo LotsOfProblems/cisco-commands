@@ -6,11 +6,12 @@ cheatsheet for ccna commands
 
 ## 📜 Table of Contents
 - [Basic Commands](#basic-commands)
-  *[Access Lists ACL](#routing-commands)
+  * [Access Lists ACL](#routing-commands)
     + [Simple ACL](#ACL)
     + [Extended ACL](#Extended-ACL)
-    + [Parameters](#Parameters)
-- [OSPF](#OSPF)
+  * [OSPF](#OSPF)
+    + 
+  
 - [Security Commands](#security-commands)
 - [Troubleshooting](#troubleshooting)
 
