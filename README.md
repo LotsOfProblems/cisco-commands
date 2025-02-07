@@ -19,8 +19,8 @@ cheatsheet for ccna commands
 - [Troubleshooting](#troubleshooting)
 
 ---
-
-## Network Masks
+<details>
+## <summary> Network Masks </summary>
 
 
 | Subnet Mask       | CIDR Notation | Wildcard Mask  | Total Hosts | Usable Hosts |
@@ -51,7 +51,7 @@ cheatsheet for ccna commands
 | 255.255.255.254  | /31          | 0.0.0.1       | 2          | 2 (Point-to-Point) |
 | 255.255.255.255  | /32          | 0.0.0.0       | 1          | 1 (Host Only) |
 
-
+</details>
 
 
 
