@@ -19,9 +19,11 @@ cheatsheet for ccna commands
 - [Troubleshooting](#troubleshooting)
 
 ---
+
+ ## Network Masks
 <details>
  
- ## Network Masks
+
  
 <summary> Table </summary>
 
