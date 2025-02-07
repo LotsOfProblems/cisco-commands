@@ -103,7 +103,6 @@ access-list NOPING deny icmp any host 192.168.1.1
 
 
 
-```sh
 
 ---
 ## OSPF 
