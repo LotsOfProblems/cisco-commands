@@ -181,9 +181,9 @@ router ospf 1
 
 ## IPSEC
 
-#### After GRE has been configured
+### After GRE has been configured
 ##### Configure ISAKMP (IKE) Phase 1
-##### Both Endpoints
+###### Both Endpoints
 ```
 crypto isakmp policy 10
  encryption aes 256
@@ -196,7 +196,7 @@ exit
 crypto isakmp key SECRET-KEY address 203.0.113.1
 ```
 ##### Configure IPsec Transform Set (Encryption)
-##### Both Endpoints
+###### Both Endpoints
 ```
 configure terminal
 crypto ipsec transform-set VPN-SET esp-aes esp-sha-hmac
@@ -205,7 +205,7 @@ exit
 
 ```
 ##### Create Crypto Map and apply Transform Set
-##### Both Endpoints
+###### Both Endpoints
 Keep in mind ACL number
 ```
 crypto map VPN-MAP 10 ipsec-isakmp
@@ -215,16 +215,16 @@ crypto map VPN-MAP 10 ipsec-isakmp
 exit
 ```
 
-###### Define an ACL for Traffic Encryption
-##### Both Endpoints
+##### Define an ACL for Traffic Encryption
+###### Both Endpoints
 ```
 access-list 110 permit gre host 192.168.1.1 host 203.0.113.1
 exit
 
 ```
 
-###### Apply the Crypto Map to the WAN Interface
-##### Both Endpoints
+##### Apply the Crypto Map to the WAN Interface
+###### Both Endpoints
 ```
 interface GigabitEthernet0/0
  crypto map VPN-MAP
