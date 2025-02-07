@@ -10,7 +10,6 @@ cheatsheet for ccna commands
     + [Simple ACL](#Simple-ACL)
     + [Extended ACL](#Extended-ACL)
   * [OSPF](#OSPF)
-    + [Setting it up](#Setting-it-up)
   * [Tunnelling](#Tunnelling)
     + [GRE (no encryption)](#gre-no-encryption)
     + [IPSEC](#IPSEC)
