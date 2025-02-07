@@ -154,7 +154,7 @@ ip ospf message-digest-key 1 md5 STRONGPASSWORD
 
 #### GRE (No Encryption)
 
-Endpoint 1
+###### Endpoint 1
 ```
 
 interface Tunnel0
@@ -163,7 +163,7 @@ interface Tunnel0
  tunnel destination 203.0.113.1        ! Remote physical IP
 
 ```
-Endpoint 2
+###### Endpoint 2
 ```
 
 interface Tunnel0
@@ -172,11 +172,62 @@ interface Tunnel0
  tunnel destination 192.168.1.1        ! Remote physical IP
 
 ```
-Enable OSPF routing on both
+###### Enable OSPF routing on both
 ```
 router ospf 1
  network 10.0.0.0 0.0.0.3 area 0
  network 192.168.1.0 0.0.0.255 area 0
 ```
 
-##IPSEC
+## IPSEC
+
+#### After GRE has been configured
+##### Configure ISAKMP (IKE) Phase 1
+##### Both Endpoints
+```
+crypto isakmp policy 10
+ encryption aes 256
+ hash sha
+ authentication pre-share
+ group 5
+ lifetime 86400
+exit
+
+crypto isakmp key SECRET-KEY address 203.0.113.1
+```
+##### Configure IPsec Transform Set (Encryption)
+##### Both Endpoints
+```
+configure terminal
+crypto ipsec transform-set VPN-SET esp-aes esp-sha-hmac
+ mode tunnel
+exit
+
+```
+##### Create Crypto Map and apply Transform Set
+##### Both Endpoints
+Keep in mind ACL number
+```
+crypto map VPN-MAP 10 ipsec-isakmp
+ set peer 203.0.113.1
+ set transform-set VPN-SET
+ match address 110
+exit
+```
+
+###### Define an ACL for Traffic Encryption
+##### Both Endpoints
+```
+access-list 110 permit gre host 192.168.1.1 host 203.0.113.1
+exit
+
+```
+
+###### Apply the Crypto Map to the WAN Interface
+##### Both Endpoints
+```
+interface GigabitEthernet0/0
+ crypto map VPN-MAP
+exit
+
+```
