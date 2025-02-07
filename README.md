@@ -203,6 +203,15 @@ ip ospf message-digest-key 1 md5 STRONGPASSWORD
 | `show ip ospf neighbor`   | Check if OSPF adjacency is formed          |
 | `traceroute 10.0.0.2`     | Confirm traffic follows the GRE tunnel     |
 
+| Command                  | Purpose                                      |
+|--------------------------|----------------------------------------------|
+| `show interfaces Tunnel0` | Check if the GRE tunnel interface is up    |
+| `show ip interface brief` | Verify the tunnel has an assigned IP       |
+| `show ip route`          | Confirm the tunnel is being used for routing |
+| `show ip ospf neighbor`   | Check if OSPF adjacency is formed          |
+| `debug tunnel`           | Show real-time GRE tunnel operations        |
+| `traceroute 10.0.0.2`     | Confirm traffic follows the GRE tunnel     |
+
 </details>
 
 
