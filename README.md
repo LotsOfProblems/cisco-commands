@@ -7,9 +7,9 @@ cheatsheet for ccna commands
 ## 📜 Table of Contents
 - [Basic Commands](#basic-commands)
   *[Access Lists ACL](#routing-commands)
-    + [Simple ACL](#Simple-ACL)
+    + [Simple ACL](#ACL)
     + [Extended ACL](#Extended-ACL)
-- [Setting up OSPF](#switching-commands)
+- [OSPF](#OSPF)
 - [Security Commands](#security-commands)
 - [Troubleshooting](#troubleshooting)
 
@@ -21,7 +21,7 @@ Here are some basic Cisco commands.
 
 
 
-## ACL
+## ACL (#basic-networking)
 
 
 ###  Verify ACLs
@@ -105,5 +105,7 @@ access-list NOPING deny icmp any host 192.168.1.1
 
 ```sh
 
+---
+## OSPF 
 
 
