@@ -12,7 +12,7 @@ cheatsheet for ccna commands
   * [OSPF](#OSPF)
     + [Setting it up](#Setting-it-up)
   * [Tunnelling](#Tunnelling)
-    + [GRE(no encryption)](#GRE(No-encryption))
+    + [GRE(no encryption)](#GRE(no-encryption))
     + [IPSEC](#IPSEC)
   
 - [Security Commands](#security-commands)
