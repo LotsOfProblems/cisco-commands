@@ -22,12 +22,11 @@ Here are some basic Cisco commands.
 
 
 
-## <details><summary> ACL </summary>
+<details>
+  <summary>## ACL</summary>
 
-
-#### Verifiy ACLs
-
-```
+### 🔹 Verify ACLs
+```sh
 show access-lists
 show running-config | section access-list
 show ip interface GigabitEthernet0/1
@@ -43,10 +42,9 @@ ip access-list extended 101
 exit
 ```
 
-
-#### Simple ACL 
-```
-access-list 100 permit tcp 192.168.1.0 0.0.0.255 10.0.0.0 0.0.0.255 
+### 🔹 Simple ACL
+```sh
+access-list 100 permit tcp 192.168.1.0 0.0.0.255 10.0.0.0 0.0.0.255
 access-list 100 deny ip any any
 exit
 
@@ -54,28 +52,24 @@ interface GigabitEthernet0/2
 ip access-group 100 in   
 exit
 ```
+ACLs can be assigned both **in** and **out** of interfaces, based on when the packets should be verified and discarded or let through.
 
-ACLs can be assigned both in and out of interfaces, based on when the packets should be verified and sicarded or let through
-
----
-## Extended-ACL
-```
+### 🔹 Extended ACL
+```sh
 access-list 110 permit tcp 192.168.1.0 0.0.0.255 10.0.0.0 0.0.0.255 eq 80
 access-list 110 permit ip any any
 
 access-list NOPING deny icmp any host 192.168.1.1
 ```
-#### ACL Rules Table
 
-| ACL Number | Action  | Protocol | Source IP      | Destination IP  | Port  
-|-----------|--------|---------|---------------|---------------|------
-| 100       | Permit | TCP     | 192.168.1.0/24 | 10.0.0.0/24  | 80   
-| 101       | Deny   | ICMP    | Any           | 10.0.0.1      | -    
-| 102       | Permit | IP      | 192.168.2.0/24 | Any          | -    
+### 🔹 ACL Rules Table
+| ACL Number | Action  | Protocol | Source IP      | Destination IP  | Port  |
+|-----------|--------|---------|---------------|---------------|------|
+| 100       | Permit | TCP     | 192.168.1.0/24 | 10.0.0.0/24  | 80   |
+| 101       | Deny   | ICMP    | Any           | 10.0.0.1      | -    |
+| 102       | Permit | IP      | 192.168.2.0/24 | Any          | -    |
 
-
-#### Cisco Extended ACL Structure
-
+### 🔹 Cisco Extended ACL Structure
 | Component      | Description                                            | Example Value                          |
 |---------------|--------------------------------------------------------|----------------------------------------|
 | `access-list` | Starts the ACL definition                              | `access-list`                          |
@@ -90,10 +84,7 @@ access-list NOPING deny icmp any host 192.168.1.1
 | `Port (Optional)` | Specifies a port number (used with TCP/UDP)        | `eq 22` (for SSH)                      |
 | `log (Optional)` | Logs matched packets to syslog                      | `log`                                  |
 
-
-
-#### Cisco ACL Operators Table
-
+### 🔹 Cisco ACL Operators Table
 | Operator  | Description                           | Example Usage                    |
 |-----------|--------------------------------------|----------------------------------|
 | `eq`      | Matches **exactly** a specific port | `access-list 100 permit tcp any any eq 80` (Allow HTTP) |
@@ -103,7 +94,8 @@ access-list NOPING deny icmp any host 192.168.1.1
 | `host`    | Matches **a single IP address**     | `access-list 104 deny ip host 192.168.1.1 any` (Block traffic from a single IP) |
 | `any`     | Matches **any IP address**          | `access-list 105 permit ip any any` (Allow all traffic) |
 | `log`     | Logs the packet match to syslog     | `access-list 106 deny ip any any log` (Log all denied traffic) |
- </details>
+</details>
+
 
 
 
