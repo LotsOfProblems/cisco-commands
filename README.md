@@ -44,6 +44,7 @@ exit
 
 <details>
   <summary>Commands</summary>
+ 
 ### Simple ACL
 ```sh
 access-list 100 permit tcp 192.168.1.0 0.0.0.255 10.0.0.0 0.0.0.255
