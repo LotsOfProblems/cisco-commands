@@ -107,4 +107,24 @@ access-list NOPING deny icmp any host 192.168.1.1
 ---
 ## OSPF 
 
+#### Seting it up
+
+```
+router ospf 100
+network 192.168.1.0 0.0.0.255 area 0
+network 10.0.0.0 0.0.0.255 area 0
+router-id 1.1.1.1
+
+interface GigabitEthernet0/0
+ip ospf priority 100
+exit
+```
+
+```
+show ip ospf	Displays------------- OSPF settings
+show ip ospf neighbor------------	Shows OSPF neighbors and their states
+show ip ospf database-----------	Displays OSPF LSAs and routing information
+show ip route ospf	------------Shows OSPF-learned routes
+debug ip ospf events------------	Debugs OSPF events in real time
+```
 
