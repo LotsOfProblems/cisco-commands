@@ -15,17 +15,15 @@ cheatsheet for ccna commands
 
 ---
 
-#### Basic Commands
+#### 
 Here are some basic Cisco commands.
 
 
----
 
 
 
+#### Simple ACL
 
-
----
 #### Verifiy ACLs
 
 ```
@@ -34,7 +32,6 @@ show running-config | section access-list
 show ip interface GigabitEthernet0/1
 ```
 
-#### Simple ACL
 ```
 access-list 100 permit tcp 192.168.1.0 0.0.0.255 10.0.0.0 0.0.0.255 
 access-list 100 deny ip any any
