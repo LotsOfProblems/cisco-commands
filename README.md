@@ -33,17 +33,26 @@ exit
 
 ACLs can be assigned both in and out of interfaces, based on when the packets should be verified and sicarded or let through
 
+---
 ##Extended-ACL
 
 Parameter	Description	Example
 **ACL Number**	Identifies the ACL (100-199 & 2000-2699 for extended ACLs)	access-list 100
+
 **permit/deny**	permit allows traffic, deny blocks traffic	permit or deny
+
 **Protocol	Filters** by protocol (IP, TCP, UDP, ICMP, etc.)	tcp, udp, icmp, ip
+
 **Source IP**	Specifies the originating IP address or subnet	192.168.1.0
+
 **Wildcard Mask**	Defines how much of the source IP should be matched	0.0.0.255 (for /24 subnet)
+
 **Destination IP**	Specifies the target IP address or subnet	10.0.0.0
+
 **Destination Wildcard** Mask	Defines how much of the destination IP should be matched	0.0.0.255
+
 **Operator (Optional)**	Defines ports & conditions (eq, gt, lt, range)	eq 80 (HTTP), gt 1024 (Dynamic Ports)
+
 **Port (Optional)**	Defines specific service ports (used with TCP/UDP)	eq 22 (SSH), eq 443 (HTTPS)
 
 Operator	Example
