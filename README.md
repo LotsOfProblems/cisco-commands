@@ -47,10 +47,11 @@ exit
 ACLs can be assigned both in and out of interfaces, based on when the packets should be verified and sicarded or let through
 
 ---
-#### Extended-ACL
-
+## Extended-ACL
 ```
 access-list 101 permit tcp 192.168.1.0 0.0.0.255 10.0.0.0 0.0.0.255 eq 80
+access-list 110 deny icmp any host 192.168.1.1
+access-list 110 permit ip any any
 ```
 #### ACL Rules Table
 
@@ -77,10 +78,7 @@ access-list 101 permit tcp 192.168.1.0 0.0.0.255 10.0.0.0 0.0.0.255 eq 80
 | `Port (Optional)` | Specifies a port number (used with TCP/UDP)        | `eq 22` (for SSH)                      |
 | `log (Optional)` | Logs matched packets to syslog                      | `log`                                  |
 
-```
-access-list 110 deny icmp any host 192.168.1.1
-access-list 110 permit ip any any
-```
+
 
 #### Cisco ACL Operators Table
 
