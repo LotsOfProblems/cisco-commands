@@ -11,9 +11,9 @@ cheatsheet for ccna commands
     + [Extended ACL](#Extended-ACL)
   * [OSPF](#OSPF)
     + [Setting it up](#Setting-it-up)
-  *[Tunnelling](#Tunnelling)
-    +[GRE(no encryption)](#Gre(No-encryption))
-    +[IPSEC](#IPSEC)
+  * [Tunnelling](#Tunnelling)
+    + [GRE(no encryption)](#Gre(No-encryption))
+    + [IPSEC](#IPSEC)
   
 - [Security Commands](#security-commands)
 - [Troubleshooting](#troubleshooting)
