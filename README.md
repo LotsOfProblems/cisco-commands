@@ -54,7 +54,7 @@ Parameter	Description	Example
 **Operator (Optional)**	Defines ports & conditions (eq, gt, lt, range)	eq 80 (HTTP), gt 1024 (Dynamic Ports)
 
 **Port (Optional)**	Defines specific service ports (used with TCP/UDP)	eq 22 (SSH), eq 443 (HTTPS)
----
+
 Operator	Example
 **eq**	Equal to a specific port	eq 80 (HTTP)
 **gt**	Greater than a specific port	gt 1023 (Ephemeral Ports)
