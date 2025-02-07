@@ -21,6 +21,19 @@ Here are some basic Cisco commands.
 
 ---
 
+
+
+
+
+---
+#### Verifiy ACLs
+
+```
+show access-lists
+show running-config | section access-list
+show ip interface GigabitEthernet0/1
+```
+
 #### Simple ACL
 ```
 access-list 100 permit tcp 192.168.1.0 0.0.0.255 10.0.0.0 0.0.0.255 
@@ -36,6 +49,10 @@ ACLs can be assigned both in and out of interfaces, based on when the packets sh
 
 ===
 #### Extended-ACL
+
+```
+access-list 101 permit tcp 192.168.1.0 0.0.0.255 10.0.0.0 0.0.0.255 eq 80
+```
 
 ####🔹 Cisco Extended ACL Structure
 
@@ -53,11 +70,10 @@ ACLs can be assigned both in and out of interfaces, based on when the packets sh
 | `Port (Optional)` | Specifies a port number (used with TCP/UDP)        | `eq 22` (for SSH)                      |
 | `log (Optional)` | Logs matched packets to syslog                      | `log`                                  |
 
-
-#### 📌 **Example of an Extended ACL Command**
-
-access-list 101 permit tcp 192.168.1.0 0.0.0.255 10.0.0.0 0.0.0.255 eq 80
-
+```
+access-list 110 deny icmp any host 192.168.1.1
+access-list 110 permit ip any any
+```
 
 #### 🔹 Cisco ACL Operators Table
 
@@ -72,25 +88,8 @@ access-list 101 permit tcp 192.168.1.0 0.0.0.255 10.0.0.0 0.0.0.255 eq 80
 | `log`     | Logs the packet match to syslog     | `access-list 106 deny ip any any log` (Log all denied traffic) |
 
 
----
-Example
-```
-access-list 110 deny icmp any host 192.168.1.1
-access-list 110 permit ip any any
-exit
 
-//
-Add to interface..
-```
 
----
-#### Verifiy ACLs
-
-```
-show access-lists
-show running-config | section access-list
-show ip interface GigabitEthernet0/1
-```
 
 ```sh
 
