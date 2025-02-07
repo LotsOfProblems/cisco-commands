@@ -11,6 +11,9 @@ cheatsheet for ccna commands
     + [Extended ACL](#Extended-ACL)
   * [OSPF](#OSPF)
     + [Setting it up](#Setting-it-up)
+  *[Tunnelling](#Tunnelling)
+    +[GRE(no encryption)](#Gre(No-encryption))
+    +[IPSEC](#IPSEC)
   
 - [Security Commands](#security-commands)
 - [Troubleshooting](#troubleshooting)
@@ -148,8 +151,31 @@ ip ospf authentication message-digest
 ip ospf message-digest-key 1 md5 STRONGPASSWORD
 ```
 
+## GRE(no encryption)
 
+Endpoint 1
+```
 
+interface Tunnel0
+ ip address 10.0.0.1 255.255.255.252  ! Assign Tunnel IP
+ tunnel source 192.168.1.1            ! Local physical IP
+ tunnel destination 203.0.113.1        ! Remote physical IP
 
+```
+Endpoint 2
+```
+
+interface Tunnel0
+ ip address 10.0.0.2 255.255.255.252  ! Assign Tunnel IP
+ tunnel source 203.0.113.1            ! Local physical IP
+ tunnel destination 192.168.1.1        ! Remote physical IP
+
+```
+Enable OSPF routing on both
+```
+router ospf 1
+ network 10.0.0.0 0.0.0.3 area 0
+ network 192.168.1.0 0.0.0.255 area 0
+```
 
 
