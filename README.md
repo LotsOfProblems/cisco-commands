@@ -47,7 +47,7 @@ exit
 
 ACLs can be assigned both in and out of interfaces, based on when the packets should be verified and sicarded or let through
 
-===
+---
 #### Extended-ACL
 
 ```
