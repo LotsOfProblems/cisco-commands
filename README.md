@@ -190,6 +190,22 @@ ip ospf message-digest-key 1 md5 STRONGPASSWORD
 
 #### GRE (No Encryption)
 
+## GRE Over IPsec Verification Commands
+
+<details>
+ <summary> Table </summary>
+
+| Command                  | Purpose                                      |
+|--------------------------|----------------------------------------------|
+| `show interfaces Tunnel0` | Check if the GRE tunnel is up              |
+| `show crypto ipsec sa`    | Ensure GRE traffic is encrypted            |
+| `show crypto isakmp sa`   | Verify IPsec negotiation                   |
+| `show ip ospf neighbor`   | Check if OSPF adjacency is formed          |
+| `traceroute 10.0.0.2`     | Confirm traffic follows the GRE tunnel     |
+
+</details>
+
+
 ###### Endpoint 1
 ```
 
