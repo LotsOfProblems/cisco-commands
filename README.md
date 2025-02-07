@@ -49,9 +49,10 @@ ACLs can be assigned both in and out of interfaces, based on when the packets sh
 ---
 ## Extended-ACL
 ```
-access-list 101 permit tcp 192.168.1.0 0.0.0.255 10.0.0.0 0.0.0.255 eq 80
-access-list 110 deny icmp any host 192.168.1.1
+access-list 110 permit tcp 192.168.1.0 0.0.0.255 10.0.0.0 0.0.0.255 eq 80
 access-list 110 permit ip any any
+
+access-list NOPING deny icmp any host 192.168.1.1
 ```
 #### ACL Rules Table
 
