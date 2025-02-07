@@ -56,7 +56,7 @@ ACLs can be assigned both in and out of interfaces, based on when the packets sh
 ---
 
 ## 📌 **Example of an Extended ACL Command**
-```sh
+
 access-list 101 permit tcp 192.168.1.0 0.0.0.255 10.0.0.0 0.0.0.255 eq 80
 
 
