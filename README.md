@@ -15,7 +15,7 @@ cheatsheet for ccna commands
 
 ---
 
-## Basic Commands
+#### Basic Commands
 Here are some basic Cisco commands.
 
 
@@ -35,9 +35,9 @@ exit
 ACLs can be assigned both in and out of interfaces, based on when the packets should be verified and sicarded or let through
 
 ===
-## Extended-ACL
+#### Extended-ACL
 
-## 🔹 Cisco Extended ACL Structure
+####🔹 Cisco Extended ACL Structure
 
 | Component      | Description                                            | Example Value                          |
 |---------------|--------------------------------------------------------|----------------------------------------|
@@ -53,14 +53,13 @@ ACLs can be assigned both in and out of interfaces, based on when the packets sh
 | `Port (Optional)` | Specifies a port number (used with TCP/UDP)        | `eq 22` (for SSH)                      |
 | `log (Optional)` | Logs matched packets to syslog                      | `log`                                  |
 
----
 
-## 📌 **Example of an Extended ACL Command**
+#### 📌 **Example of an Extended ACL Command**
 
 access-list 101 permit tcp 192.168.1.0 0.0.0.255 10.0.0.0 0.0.0.255 eq 80
 
 
-## 🔹 Cisco ACL Operators Table
+#### 🔹 Cisco ACL Operators Table
 
 | Operator  | Description                           | Example Usage                    |
 |-----------|--------------------------------------|----------------------------------|
@@ -72,30 +71,26 @@ access-list 101 permit tcp 192.168.1.0 0.0.0.255 10.0.0.0 0.0.0.255 eq 80
 | `any`     | Matches **any IP address**          | `access-list 105 permit ip any any` (Allow all traffic) |
 | `log`     | Logs the packet match to syslog     | `access-list 106 deny ip any any log` (Log all denied traffic) |
 
-Operator	Example
-**eq**	Equal to a specific port	eq 80 (HTTP)
-**gt**	Greater than a specific port	gt 1023 (Ephemeral Ports)
-**lt**	Less than a specific port	lt 1024 (Privileged Ports)
-**range**	Defines a range of ports	range 20 21 (FTP Data & Control)
 
+---
 Example
-
+```
 access-list 110 deny icmp any host 192.168.1.1
 access-list 110 permit ip any any
 exit
 
 //
 Add to interface..
+```
 
 ---
+#### Verifiy ACLs
 
-## Verifiy ACLs
-
+```
 show access-lists
 show running-config | section access-list
 show ip interface GigabitEthernet0/1
-
-
+```
 
 ```sh
 
