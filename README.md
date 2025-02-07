@@ -22,7 +22,7 @@ Here are some basic Cisco commands.
 
 
 
-## <details> <summary> ACL 
+## <details><summary> ACL </summary>
 
 
 #### Verifiy ACLs
@@ -103,8 +103,8 @@ access-list NOPING deny icmp any host 192.168.1.1
 | `host`    | Matches **a single IP address**     | `access-list 104 deny ip host 192.168.1.1 any` (Block traffic from a single IP) |
 | `any`     | Matches **any IP address**          | `access-list 105 permit ip any any` (Allow all traffic) |
 | `log`     | Logs the packet match to syslog     | `access-list 106 deny ip any any log` (Log all denied traffic) |
+ </details>
 
-</summary>
 
 
 
