@@ -9,6 +9,7 @@ cheatsheet for ccna commands
   *[Access Lists ACL](#routing-commands)
     + [Simple ACL](#ACL)
     + [Extended ACL](#Extended-ACL)
+    + [Parameters](#Parameters)
 - [OSPF](#OSPF)
 - [Security Commands](#security-commands)
 - [Troubleshooting](#troubleshooting)
@@ -42,8 +43,7 @@ exit
 ```
 
 
-<details>
-  <summary>Commands</summary>
+
  
 ### Simple ACL
 ```sh
@@ -64,7 +64,8 @@ access-list 110 permit ip any any
 
 access-list NOPING deny icmp any host 192.168.1.1
 ```
-
+<details>
+  <summary>Parameters</summary>
 ###  ACL Rules Table
 | ACL Number | Action  | Protocol | Source IP      | Destination IP  | Port  |
 |-----------|--------|---------|---------------|---------------|------|
