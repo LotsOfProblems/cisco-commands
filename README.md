@@ -10,7 +10,7 @@ cheatsheet for ccna commands
     + [Simple ACL](#ACL)
     + [Extended ACL](#Extended-ACL)
   * [OSPF](#OSPF)
-    + 
+    + [Setting it up](Setting-it-up)
   
 - [Security Commands](#security-commands)
 - [Troubleshooting](#troubleshooting)
