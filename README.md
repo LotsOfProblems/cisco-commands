@@ -22,7 +22,7 @@ Here are some basic Cisco commands.
 
 
 
-## <summary> ACL </summary>
+## <details> <summary> ACL </summary>
 
 
 #### Verifiy ACLs
