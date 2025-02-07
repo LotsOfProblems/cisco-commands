@@ -34,7 +34,7 @@ exit
 ACLs can be assigned both in and out of interfaces, based on when the packets should be verified and sicarded or let through
 
 ---
-##Extended-ACL
+## Extended-ACL
 
 Parameter	Description	Example
 **ACL Number**	Identifies the ACL (100-199 & 2000-2699 for extended ACLs)	access-list 100
