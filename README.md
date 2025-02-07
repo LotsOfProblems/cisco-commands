@@ -7,7 +7,7 @@ cheatsheet for ccna commands
 ## 📜 Table of Contents
 - [Basic Commands](#basic-commands)
   * [ACL](#ACL)
-    + [Simple ACL](#ACL)
+    + [Simple ACL](#Simple-ACL)
     + [Extended ACL](#Extended-ACL)
   * [OSPF](#OSPF)
     + [Setting it up](#Setting-it-up)
@@ -23,7 +23,7 @@ Here are some basic Cisco commands.
 
 
 
-## ACL (#basic-networking)
+## ACL 
 
 
 ###  Verify ACLs
