@@ -57,7 +57,7 @@ cheatsheet for ccna commands
 | 255.255.255.255  | /32          | 0.0.0.0       | 1          | 1 (Host Only) |
 
 </details>
-
+---
 
 
 
