@@ -20,7 +20,10 @@ cheatsheet for ccna commands
 
 ---
 <details>
-## <summary> Network Masks </summary>
+ 
+ ## Network Masks
+ 
+<summary> Table </summary>
 
 
 | Subnet Mask       | CIDR Notation | Wildcard Mask  | Total Hosts | Usable Hosts |
