@@ -10,7 +10,7 @@ cheatsheet for ccna commands
     + [Simple ACL](#ACL)
     + [Extended ACL](#Extended-ACL)
   * [OSPF](#OSPF)
-    + [Setting it up](Setting-it-up)
+    + [Setting it up](#Setting-it-up)
   
 - [Security Commands](#security-commands)
 - [Troubleshooting](#troubleshooting)
@@ -121,7 +121,7 @@ access-list NOPING deny icmp any host 192.168.1.1
 | `show ip route ospf`    | Shows OSPF-learned routes                    |
 | `debug ip ospf events`  | Debugs OSPF events in real time              |
 
-#### Setting it up
+#### Setting it up 
 
 ```
 router ospf 100
