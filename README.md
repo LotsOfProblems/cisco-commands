@@ -65,8 +65,10 @@ access-list 110 permit ip any any
 access-list NOPING deny icmp any host 192.168.1.1
 ```
 <details>
-  <summary>Parameters</summary>
+##  <summary>Parameters</summary>
+ 
 ###  ACL Rules Table
+
 | ACL Number | Action  | Protocol | Source IP      | Destination IP  | Port  |
 |-----------|--------|---------|---------------|---------------|------|
 | 100       | Permit | TCP     | 192.168.1.0/24 | 10.0.0.0/24  | 80   |
