@@ -31,7 +31,18 @@ Here are some basic Cisco commands.
 show access-lists
 show running-config | section access-list
 show ip interface GigabitEthernet0/1
+
+show access-lists 101
+Extended IP access list 101
+  10 permit tcp any any eq 80
+  20 permit tcp any any eq 443
+  30 deny ip any any
+configure terminal
+ip access-list extended 101
+ no 10   ! Removes rule number 10 (HTTP)
+exit
 ```
+
 
 #### Simple ACL 
 ```
