@@ -87,6 +87,13 @@ access-list 110 permit ip any any
 | `any`     | Matches **any IP address**          | `access-list 105 permit ip any any` (Allow all traffic) |
 | `log`     | Logs the packet match to syslog     | `access-list 106 deny ip any any log` (Log all denied traffic) |
 
+## 🔹 ACL Rules Table
+
+| ACL Number | Action  | Protocol | Source IP      | Destination IP  | Port  | Applied Interface |
+|-----------|--------|---------|---------------|---------------|------|-----------------|
+| 100       | Permit | TCP     | 192.168.1.0/24 | 10.0.0.0/24  | 80   | GigabitEthernet0/1 |
+| 101       | Deny   | ICMP    | Any           | 10.0.0.1      | -    | GigabitEthernet0/2 |
+| 102       | Permit | IP      | 192.168.2.0/24 | Any          | -    | GigabitEthernet0/3 |
 
 
 
