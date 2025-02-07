@@ -152,7 +152,7 @@ ip ospf message-digest-key 1 md5 STRONGPASSWORD
 ```
 ## Tunnelling
 
-#### GRE(no encryption)
+#### GRE (No Encryption)
 
 Endpoint 1
 ```
