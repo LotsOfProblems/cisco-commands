@@ -217,7 +217,7 @@ router ospf 1
 
 ## IPSEC
 
-### After GRE has been configured
+###### with GRE or not
 ##### Configure ISAKMP (IKE) Phase 1
 ###### Both Endpoints
 ```
