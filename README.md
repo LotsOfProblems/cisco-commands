@@ -107,6 +107,16 @@ access-list NOPING deny icmp any host 192.168.1.1
 ---
 ## OSPF 
 
+#### Verify OSPF Configuration
+
+| Command                 | Description                                   |
+|-------------------------|-----------------------------------------------|
+| `show ip ospf`         | Displays OSPF settings                        |
+| `show ip ospf neighbor` | Shows OSPF neighbors and their states        |
+| `show ip ospf database` | Displays OSPF LSAs and routing information   |
+| `show ip route ospf`    | Shows OSPF-learned routes                    |
+| `debug ip ospf events`  | Debugs OSPF events in real time              |
+
 #### Seting it up
 
 ```
@@ -120,11 +130,22 @@ ip ospf priority 100
 exit
 ```
 
+#### Adjust OSPF Timers
 ```
-show ip ospf	Displays------------- OSPF settings
-show ip ospf neighbor------------	Shows OSPF neighbors and their states
-show ip ospf database-----------	Displays OSPF LSAs and routing information
-show ip route ospf	------------Shows OSPF-learned routes
-debug ip ospf events------------	Debugs OSPF events in real time
+interface GigabitEthernet0/0
+ip ospf hello-interval 10
+ip ospf dead-interval 40
+exit
 ```
+#### Enable OSPF Authentication (Optional)
+```
+interface GigabitEthernet0/0
+ip ospf authentication message-digest
+ip ospf message-digest-key 1 md5 STRONGPASSWORD
+```
+
+
+
+
+
 
