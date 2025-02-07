@@ -22,11 +22,11 @@ Here are some basic Cisco commands.
 ---
 
 ## Simple ACL
----
+
 access-list 100 permit tcp 192.168.1.0 0.0.0.255 10.0.0.0 0.0.0.255 
 access-list 100 deny ip any any
 exit
----
+
 interface GigabitEthernet0/2
 ip access-group 100 in   
 exit
