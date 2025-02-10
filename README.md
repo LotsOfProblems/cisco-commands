@@ -192,7 +192,7 @@ ip ospf message-digest-key 1 md5 STRONGPASSWORD
 ## GRE Over IPsec Verification Commands
 
 <details>
- <summary> Table </summary>
+ <summary> Check commands </summary>
 
 | Command                  | Purpose                                      |
 |--------------------------|----------------------------------------------|
