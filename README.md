@@ -93,7 +93,7 @@ interface GigabitEthernet0/3
 
 ```
 ---
-#### Configure Router-on-a-Stick
+#### Configure Router
 ```
 enable
 configure terminal
