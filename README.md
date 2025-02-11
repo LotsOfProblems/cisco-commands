@@ -13,7 +13,7 @@ cheatsheet for ccna commands
   * [Tunnelling](#Tunnelling)
     + [GRE (no encryption)](#gre-no-encryption)
     + [IPSEC](#IPSEC)
-  *[QOS](#QOS)
+  * [QOS](#QOS)
      + [Class Mapping and Marking](#Class-Mapping-and-Marking)
   
 - [Security Commands](#security-commands)
