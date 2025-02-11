@@ -6,6 +6,8 @@ cheatsheet for ccna commands
 
 ## 📜 Table of Contents
 - [Network Masks](#Network-Masks)
+  
+  * [Router on a Stick](#Router-on-a-Stick)
   * [ACL](#ACL)
     + [Simple ACL](#Simple-ACL)
     + [Extended ACL](#Extended-ACL)
@@ -60,8 +62,58 @@ cheatsheet for ccna commands
 </details>
 
 ---
+## Router on a Stick
+#### Configure VLANs on the Switch
+```
+enable
+configure terminal
 
+! Create VLAN 10
+vlan 10
+ name VLAN10
 
+! Create VLAN 20
+vlan 20
+ name VLAN20
+
+! Assign interfaces to VLANs
+interface GigabitEthernet0/1
+ switchport mode access
+ switchport access vlan 10
+
+interface GigabitEthernet0/2
+ switchport mode access
+ switchport access vlan 20
+
+! Configure Trunking on the link to the Router
+interface GigabitEthernet0/3
+ switchport mode trunk
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 10,20
+
+```
+---
+#### Configure Router-on-a-Stick
+```
+enable
+configure terminal
+
+! Configure the trunk interface
+interface GigabitEthernet0/0
+ no shutdown
+
+! Create Subinterface for VLAN 10
+interface GigabitEthernet0/0.10
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
+
+! Create Subinterface for VLAN 20
+interface GigabitEthernet0/0.20
+ encapsulation dot1Q 20
+ ip address 192.168.20.1 255.255.255.0
+
+```
+---
 
 ## ACL 
 
