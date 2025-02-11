@@ -296,3 +296,49 @@ exit
 
 ### QOS
 ### Class Mapping and Marking
+
+```
+class-map match-all CRITICAL
+ match protocol ospf
+class-map match-any MANAGEMENT
+ match protocol telnet
+ match protocol ssh
+class-map match-any WEB
+ match protocol http
+!
+policy-map MARKING
+ class CRITICAL
+  set precedence 7
+ class MANAGEMENT
+  set precedence 5
+ class WEB
+  set precedence 3
+```
+---
+
+```
+class-map ?
+  WORD       class-map name
+  match-all  Logical-AND all matching statements under this classmap
+  match-any  Logical-OR all matching statements under this classmap
+  type       type of the class-map
+```
+---
+```
+match ?
+  access-group         Access group
+  any                  Any packets
+  class-map            Class map
+  cos                  IEEE 802.1Q/ISL class of service/user priority values
+  destination-address  Destination address
+  input-interface      Select an input interface to match
+  ip                   IP specific values
+  not                  Negate this match result
+  precedence           Match Precedence in IP(v4) and IPv6 packets
+  protocol             Protocol
+  qos-group            Qos-group
+```
+
+---
+
+
