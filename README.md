@@ -296,7 +296,7 @@ exit
 
 ### QOS
 ### Class Mapping and Marking
-
+---
 ```
 class-map match-all CRITICAL
  match protocol ospf
@@ -314,6 +314,18 @@ policy-map MARKING
  class WEB
   set precedence 3
 ```
+---
+#### Precedence
+| **Value** | **Description**                                    |
+|-----------|----------------------------------------------------|
+| `0`       | Routine - Match packets with routine precedence   |
+| `1`       | Priority - Match packets with priority precedence |
+| `2`       | Immediate - Match packets with immediate precedence |
+| `3`       | Flash - Match packets with flash precedence       |
+| `4`       | Flash Override - Match packets with flash override precedence |
+| `5`       | Critical - Match packets with critical precedence |
+| `6`       | Internet - Match packets with internetwork control precedence |
+| `7`       | Network - Match packets with network control precedence |
 ---
 
 ```
