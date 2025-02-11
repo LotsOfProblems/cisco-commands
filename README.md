@@ -13,6 +13,8 @@ cheatsheet for ccna commands
   * [Tunnelling](#Tunnelling)
     + [GRE (no encryption)](#gre-no-encryption)
     + [IPSEC](#IPSEC)
+  *[QOS](#QOS)
+     + [Class Mapping and Marking](#Class-Mapping-and-Marking)
   
 - [Security Commands](#security-commands)
 - [Troubleshooting](#troubleshooting)
@@ -291,3 +293,6 @@ interface GigabitEthernet0/0
 exit
 
 ```
+
+### QOS
+### Class Mapping and Marking
