@@ -313,6 +313,9 @@ policy-map MARKING
   set precedence 5
  class WEB
   set precedence 3
+
+interface g0/0/0
+service-policy output MARKING
 ```
 ---
 #### Precedence
