@@ -19,6 +19,7 @@ cheatsheet for ccna commands
      + [Class Mapping and Marking](#Class-Mapping-and-Marking)
   * [Network Management](#Network-Mangement)
      + [CDP](#CDP)
+     + [LLDP](#LLDP)
   
 - [Security Commands](#security-commands)
 - [Troubleshooting](#troubleshooting)
@@ -412,8 +413,35 @@ match ?
 
 ## CDP
 ---
+
+##### Disable (enabled by default)
+```
+ no cdp enable
+
+```
+
+
+##### Info
 ```
 show cdp neighbors
+show cdp neighbors detail
 ```
+
+
+---
+## LLDP
+---
+
+##### Enable 
+```
+lldp run
+```
+###### On interface
+```
+lldp receive
+lldp transmit
+```
+
+
 
 
