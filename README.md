@@ -18,7 +18,7 @@ cheatsheet for ccna commands
   * [QOS](#QOS)
      + [Class Mapping and Marking](#Class-Mapping-and-Marking)
   * [Network Management](#Network-Mangement)
-     + [not yet](#Class-Mapping-and-Marking)
+     + [CDP](#CDP)
   
 - [Security Commands](#security-commands)
 - [Troubleshooting](#troubleshooting)
@@ -409,5 +409,11 @@ match ?
 ```
 
 ---
+
+## CDP
+---
+```
+show cdp neighbors
+```
 
 
