@@ -23,8 +23,7 @@ cheatsheet for ccna commands
      + [Logging](#Logging)
      + [Backup](#Backup)
   
-- [Security Commands](#security-commands)
-- [Troubleshooting](#troubleshooting)
+
 
 ---
 
