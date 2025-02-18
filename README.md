@@ -455,6 +455,7 @@ lldp transmit
 logging on
 terminal monitor
 logging buffered <size> <level>
+service timestamps log datetime msec
 
 Levels range from 0 (emergencies) to 7 (debugging):
 
