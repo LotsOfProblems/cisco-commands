@@ -21,6 +21,7 @@ cheatsheet for ccna commands
      + [CDP](#CDP)
      + [LLDP](#LLDP)
      + [Logging](#Logging)
+     + [Backup](#Backup)
   
 - [Security Commands](#security-commands)
 - [Troubleshooting](#troubleshooting)
@@ -478,5 +479,20 @@ logging trap informational
 snmp-server enable traps syslog
 ```
 
+
+---
+
+## Backup
+
+---
+
+##### Copy running-config
+```
+copy running-config tftp:100.10.1.10 R_R-C
+```
+###### Copy File
+```
+copy <TFTPpath> tftp:<IPdest> <filename>
+```
 
 
