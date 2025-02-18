@@ -20,6 +20,7 @@ cheatsheet for ccna commands
   * [Network Management](#Network-Mangement)
      + [CDP](#CDP)
      + [LLDP](#LLDP)
+     + [Logging](#Logging)
   
 - [Security Commands](#security-commands)
 - [Troubleshooting](#troubleshooting)
@@ -431,8 +432,13 @@ show cdp neighbors detail
 ---
 ## LLDP
 ---
+## Show 
+```
+show logging
+```
 
-##### Enable 
+
+##### Enable (disabled by default on terminal console)
 ```
 lldp run
 ```
@@ -442,6 +448,34 @@ lldp receive
 lldp transmit
 ```
 
+## Logging
+
+###### Enable
+```
+logging on
+terminal monitor
+logging buffered <size> <level>
+
+Levels range from 0 (emergencies) to 7 (debugging):
+
+0 - emergencies
+1 - alerts
+2 - critical
+3 - errors
+4 - warnings
+5 - notifications
+6 - informational
+7 - debugging
+```
+
+
+###### Send to external host
+```
+logging host <IP_Address>
+logging host 192.168.1.100
+logging trap informational
+snmp-server enable traps syslog
+```
 
 
 
