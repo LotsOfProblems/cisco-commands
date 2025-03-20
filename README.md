@@ -22,6 +22,8 @@ cheatsheet for ccna commands
      + [LLDP](#LLDP)
      + [Logging](#Logging)
      + [Backup](#Backup)
+  * [NAT](#NAT)
+    
   
 
 
@@ -493,5 +495,89 @@ copy running-config tftp:100.10.1.10 R_R-C
 ```
 copy <TFTPpath> tftp:<IPdest> <filename>
 ```
+
+## NAT
+```
+# Cisco IOS NAT (Network Address Translation) Commands
+
+## 1. Enable NAT
+```sh
+configure terminal
+```
+
+## 2. Static NAT Configuration
+```sh
+ip nat inside source static <inside-local-ip> <inside-global-ip>
+```
+Example:
+```sh
+ip nat inside source static 192.168.1.10 203.0.113.10
+```
+
+## 3. Dynamic NAT Configuration
+```sh
+ip nat pool NAT_POOL <start-ip> <end-ip> netmask <subnet-mask>
+access-list <acl-number> permit <source-ip> <wildcard-mask>
+ip nat inside source list <acl-number> pool NAT_POOL
+```
+Example:
+```sh
+ip nat pool NAT_POOL 203.0.113.100 203.0.113.200 netmask 255.255.255.0
+access-list 1 permit 192.168.1.0 0.0.0.255
+ip nat inside source list 1 pool NAT_POOL
+```
+
+## 4. Port Address Translation (PAT) / NAT Overload
+```sh
+ip nat inside source list <acl-number> interface <outside-interface> overload
+```
+Example:
+```sh
+access-list 1 permit 192.168.1.0 0.0.0.255
+ip nat inside source list 1 interface GigabitEthernet0/0 overload
+```
+
+## 5. NAT Interface Configuration
+```sh
+interface <interface-name>
+ip nat inside  # For inside interface
+exit
+interface <interface-name>
+ip nat outside  # For outside interface
+exit
+```
+Example:
+```sh
+interface GigabitEthernet0/1
+ ip nat inside
+ exit
+interface GigabitEthernet0/0
+ ip nat outside
+ exit
+```
+
+## 6. NAT Verification Commands
+```sh
+show ip nat translations  # Display NAT translation table
+show ip nat statistics  # Display NAT statistics
+clear ip nat translation *  # Clear all NAT translations
+```
+
+## 7. Remove NAT Configuration
+```sh
+no ip nat inside source static <inside-local-ip> <inside-global-ip>
+no ip nat inside source list <acl-number> pool NAT_POOL
+no ip nat inside source list <acl-number> interface <outside-interface> overload
+```
+
+## Notes
+- **Static NAT**: Maps one inside local IP to one public IP.
+- **Dynamic NAT**: Uses a pool of public IPs for internal hosts.
+- **PAT (Overload)**: Maps multiple internal IPs to a single public IP using different port numbers.
+
+Feel free to modify this list based on your specific needs!
+
+```
+
 
 
