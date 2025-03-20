@@ -575,9 +575,7 @@ no ip nat inside source list <acl-number> interface <outside-interface> overload
 - **Dynamic NAT**: Uses a pool of public IPs for internal hosts.
 - **PAT (Overload)**: Maps multiple internal IPs to a single public IP using different port numbers.
 
-Feel free to modify this list based on your specific needs!
 
-```
 
 
 
