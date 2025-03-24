@@ -6,7 +6,7 @@ cheatsheet for ccna commands
 
 ## 📜 Table of Contents
 - [Network Masks](#Network-Masks)
-  * [Basic Configuration](#Basic Configuration)
+  * [Basic Configuration](#Basic-Configuration)
   * [Router on a Stick](#Router-on-a-Stick)
   * [ACL](#ACL)
     + [Simple ACL](#Simple-ACL)
