@@ -6,7 +6,7 @@ cheatsheet for ccna commands
 
 ## 📜 Table of Contents
 - [Network Masks](#Network-Masks)
-  
+  * [Basic Configuration](#Basic Configuration)
   * [Router on a Stick](#Router-on-a-Stick)
   * [ACL](#ACL)
     + [Simple ACL](#Simple-ACL)
@@ -66,6 +66,39 @@ cheatsheet for ccna commands
 | 255.255.255.255  | /32          | 0.0.0.0       | 1          | 1 (Host Only) |
 
 </details>
+---
+## Basic Configuration
+
+#### Disable DNS lookup, Hostname, Domain Name, MOTD 
+```
+enable
+config terminal
+no ip domain lookup 
+hostname R1
+ip domain-name ccna-lab.com
+banner motd #Unauthorized Access is Prohibited#
+```
+
+#### Password
+```
+line console 0
+password ciscoconpass
+login
+exit
+
+security passwords min-length 10
+
+username admin secret admin1pass
+
+line vty 0 15
+login local
+transport input ssh
+exit
+
+service password-encryption
+crypto key generate rsa 
+How many bits in the modulus [512]: 1024
+```
 
 ---
 ## Router on a Stick
